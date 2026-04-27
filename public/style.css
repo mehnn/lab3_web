@@ -1,0 +1,205 @@
+/* Базові налаштування сторінки */
+html,
+body {
+    height: 100%;
+}
+
+/* CSS-змінні (кольори/радіуси) */
+:root {
+    /* Основна палітра */
+    --w: #ffffff;
+    /* white */
+    --g: #5a5a5a;
+    /* gray */
+    --y: #e6d631;
+    /* yellow */
+    --gr: #9bc02c;
+    /* green */
+
+    /* Нейтральні кольори UI */
+    --bg: #fffdf7;
+    --text: #2f2f2f;
+    --muted: rgba(90, 90, 90, .78);
+    --border: rgba(90, 90, 90, .18);
+    --surface: rgba(255, 255, 255, .88);
+
+    /* Радіуси */
+    --radius: 18px;
+}
+
+/* Фон сторінки + базовий текст */
+body {
+    min-height: 100vh;
+
+    /* Фонові градієнти (жовтий/зелений) */
+    background:
+        radial-gradient(1200px 800px at 10% 10%, rgba(230, 214, 49, .30), transparent 60%),
+        radial-gradient(1000px 700px at 30% 40%, rgba(230, 214, 49, .22), transparent 62%),
+        radial-gradient(1100px 800px at 70% 25%, rgba(230, 214, 49, .24), transparent 60%),
+        radial-gradient(1200px 900px at 90% 10%, rgba(230, 214, 49, .28), transparent 62%),
+        radial-gradient(1200px 900px at 85% 55%, rgba(155, 192, 44, .16), transparent 65%),
+        radial-gradient(1200px 900px at 15% 80%, rgba(155, 192, 44, .14), transparent 65%),
+        linear-gradient(180deg, #fffdf7 0%, #f6f6f6 100%);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text);
+}
+
+/* Посилання без підкреслення */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Допоміжний сірий текст */
+.small-muted {
+    color: var(--muted);
+}
+
+/* Скляна панель */
+.glass {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .06);
+}
+
+/* Навігація */
+.navbar {
+    background: rgba(255, 255, 255, .86) !important;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+/* Блок бренду */
+.brand-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 18px rgba(230, 214, 49, .18));
+}
+
+.brand-text {
+    font-weight: 900;
+    letter-spacing: .8px;
+}
+
+/* Бейдж */
+.badge-soft {
+    background: rgba(230, 214, 49, .22);
+    border: 1px solid rgba(230, 214, 49, .38);
+    color: #5b5200;
+}
+
+/* Кнопки */
+.btn-brand {
+    background: linear-gradient(135deg, var(--y), #fff089);
+    border: 0;
+    color: #2b2b2b;
+    font-weight: 900;
+}
+
+.btn-brand:hover {
+    filter: brightness(1.03);
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, var(--gr), #c7e86b);
+    border: 0;
+    color: #162006;
+    font-weight: 900;
+}
+
+.btn-accent:hover {
+    filter: brightness(1.03);
+}
+
+.btn-soft {
+    border: 1px solid rgba(90, 90, 90, .22);
+    background: rgba(255, 255, 255, .65);
+    color: var(--text);
+    font-weight: 700;
+}
+
+.btn-soft:hover {
+    background: rgba(255, 255, 255, .88);
+}
+
+/* Поля форм */
+.form-control,
+.form-select {
+    background: rgba(255, 255, 255, .92);
+    border: 1px solid rgba(90, 90, 90, .22);
+    color: var(--text);
+}
+
+.form-control::placeholder {
+    color: rgba(90, 90, 90, .6);
+}
+
+/* Селекти (щоб випадаючий список був читабельний) */
+select,
+option {
+    color: var(--text);
+    background: var(--w);
+}
+
+/* Фокус у формах */
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 .25rem rgba(155, 192, 44, .18);
+    border-color: rgba(155, 192, 44, .55);
+}
+
+/* Таблиці */
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--text);
+    border-color: rgba(90, 90, 90, .22);
+}
+
+.table th,
+.table td {
+    border-color: rgba(90, 90, 90, .22) !important;
+}
+
+/* Горизонтальна лінія */
+hr {
+    border-color: rgba(90, 90, 90, .18);
+}
+
+/* Прогрес */
+.progress {
+    background: rgba(90, 90, 90, .12) !important;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--y), var(--gr));
+}
+
+/* KPI-картки на профілі */
+.kpi {
+    border: 1px solid rgba(90, 90, 90, .18);
+    background: rgba(255, 255, 255, .78);
+    border-radius: 16px;
+    padding: 14px 14px;
+}
+
+.kpi .n {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+/* Футер */
+footer {
+    border-top: 1px solid var(--border);
+    background: rgba(255, 255, 255, .78);
+    backdrop-filter: blur(10px);
+}
